@@ -12,7 +12,7 @@
         body {
             font-family: 'Inter', sans-serif;
             /* Add padding to the top of the body to prevent content from being hidden by the fixed header */
-            padding-top: 12rem; /* Adjusted based on header height, including nav */
+            padding-top: 4rem; /* Adjusted to only account for the fixed navigation bar */
             scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
         /* Custom styles for subtle animations/transitions if needed, though Tailwind handles most */
@@ -23,37 +23,38 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header Section (Fixed) -->
-    <header class="bg-gradient-to-r from-indigo-600 to-purple-700 shadow-xl py-6 text-white fixed top-0 w-full z-50">
+    <!-- Fixed Navigation Header -->
+    <header class="bg-indigo-800 bg-opacity-90 shadow-xl text-white fixed top-0 w-full z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm sm:text-base">
+            <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Summary</a>
+            <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Business & Objectives</a>
+            <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Core Approach</a>
+            <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 1</a>
+            <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 2</a>
+            <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Budget</a>
+            <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Measurement</a>
+            <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Next Steps</a>
+            <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section (Scrolls with content) -->
+    <section id="hero-banner" class="bg-gradient-to-r from-indigo-600 to-purple-700 shadow-xl py-10 text-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-3xl sm:text-4xl font-extrabold mb-0 drop-shadow-lg">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-0 drop-shadow-lg">
                 Marketing Strategy
             </h1>
-            <h2 class="text-xl sm:text-2xl font-semibold mt-1 mb-2 opacity-90">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mt-2 mb-4 opacity-90">
                 Tori Antal
             </h2>
-            <p class="text-sm sm:text-base opacity-80">
+            <p class="text-lg sm:text-xl opacity-80">
                 Building a Sustainable Client Base
             </p>
-            <p class="text-xs sm:text-sm opacity-70 mt-1">
+            <p class="text-sm sm:text-base opacity-70 mt-2">
                 July 3, 2025
             </p>
         </div>
-        <!-- Navigation Bar -->
-        <nav class="bg-indigo-800 bg-opacity-70 py-3 mt-4">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm sm:text-base">
-                <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Summary</a>
-                <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Business & Objectives</a>
-                <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Core Approach</a>
-                <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 1</a>
-                <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 2</a>
-                <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Budget</a>
-                <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Measurement</a>
-                <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Next Steps</a>
-                <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Contact</a>
-            </div>
-        </nav>
-    </header>
+    </section>
 
     <!-- Executive Summary Section -->
     <section id="executive-summary" class="py-16 px-4 sm:px-6 lg:px-8">
