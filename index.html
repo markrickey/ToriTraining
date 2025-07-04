@@ -11,8 +11,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            /* Add padding to the top of the body to prevent content from being hidden by the fixed header */
-            padding-top: 4rem; /* Adjusted to only account for the fixed navigation bar */
+            /* Adjusted padding-top to accommodate the fixed navigation bar */
+            padding-top: 4rem;
             scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
         /* Custom styles for subtle animations/transitions if needed, though Tailwind handles most */
@@ -25,17 +25,33 @@
 
     <!-- Fixed Navigation Header -->
     <header class="bg-indigo-800 bg-opacity-90 shadow-xl text-white fixed top-0 w-full z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm sm:text-base">
-            <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Summary</a>
-            <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Business & Objectives</a>
-            <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Core Approach</a>
-            <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 1</a>
-            <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 2</a>
-            <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Budget</a>
-            <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Measurement</a>
-            <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Next Steps</a>
-            <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Contact</a>
-        </nav>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <!-- Brand Graphic / Logo -->
+            <div class="flex items-center">
+                <span class="text-xl font-bold text-white tracking-wide">Tori Antal</span>
+                <span class="ml-2 text-indigo-200 text-sm opacity-80 hidden sm:inline">Fitness</span>
+            </div>
+
+            <!-- Hamburger menu button for mobile -->
+            <button id="nav-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links (Collapsible) -->
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-4 mt-3 md:mt-0 w-full md:w-auto">
+                <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Summary</a>
+                <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Business & Objectives</a>
+                <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Core Approach</a>
+                <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Phase 1</a>
+                <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Phase 2</a>
+                <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Budget</a>
+                <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Measurement</a>
+                <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Next Steps</a>
+                <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Banner Section (Scrolls with content) -->
@@ -45,7 +61,7 @@
                 Marketing Strategy
             </h1>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mt-2 mb-4 opacity-90">
-                Tori Antal
+                For Tori Antal
             </h2>
             <p class="text-lg sm:text-xl opacity-80">
                 Building a Sustainable Client Base
@@ -60,7 +76,7 @@
     <section id="executive-summary" class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
             <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">🎯</span> What's the Goal?
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Goal" alt="Goal Icon" class="mr-3 w-16 h-16 rounded-full"> What's the Goal?
             </h2>
             <p class="text-lg leading-relaxed text-gray-700 mb-4">
                 This proposal outlines a strategic marketing approach designed to establish Tori Antal as a leading local fitness expert and build a robust, sustainable client base. Recognizing her preference for a less intensive social media presence, the strategy emphasizes authentic connections, community engagement, and valuable content.
@@ -75,14 +91,14 @@
     <section id="business-objectives" class="py-16 px-4 sm:px-6 lg:px-8 bg-indigo-50">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">💡</span> Understanding the Business & Objectives
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Insight" alt="Insight Icon" class="mr-3 w-16 h-16 rounded-full"> Understanding the Business & Objectives
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Business Card -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow duration-300 card-hover-scale">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4 flex items-center">
-                        <span class="mr-2">🏢</span> The Business: Tori Antal Fitness
+                        <img src="https://placehold.co/60x60/4F46E5/FFFFFF?text=Biz" alt="Business Icon" class="mr-2 w-12 h-12 rounded-full"> The Business: Tori Antal Fitness
                     </h3>
                     <ul class="list-none text-lg text-gray-700 space-y-3">
                         <li class="flex items-start"><span class="mr-2 text-indigo-500">✔️</span> **Services Offered:** 1-on-1 Personal Training, Small Group Sessions, Online Coaching.</li>
@@ -93,7 +109,7 @@
                 <!-- Marketing Objectives Card -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow duration-300 card-hover-scale">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4 flex items-center">
-                        <span class="mr-2">🚀</span> Marketing Objectives
+                        <img src="https://placehold.co/60x60/4F46E5/FFFFFF?text=Obj" alt="Objectives Icon" class="mr-2 w-12 h-12 rounded-full"> Marketing Objectives
                     </h3>
                     <ul class="list-none text-lg text-gray-700 space-y-3">
                         <li class="flex items-start"><span class="mr-2 text-indigo-500">✅</span> Acquire **5-7 new clients** within the first 3 months.</li>
@@ -110,16 +126,13 @@
     <section id="core-approach" class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">🌟</span> Our Core Marketing Approach: The Pillars of Growth
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Pillars" alt="Pillars Icon" class="mr-3 w-16 h-16 rounded-full"> Our Core Marketing Approach: The Pillars of Growth
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Pillar 1 -->
                 <div class="bg-indigo-50 p-6 rounded-lg shadow-md border border-indigo-100 hover:shadow-xl transition-all duration-300 card-hover-scale">
                     <div class="text-indigo-600 text-5xl mb-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 inline-block">
-                            <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 4.06L5.03 11.03a.75.75 0 0 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
-                            <path fill-rule="evenodd" d="M11.47 11.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 13.06l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" />
-                        </svg>
+                        <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Network" alt="Network Icon" class="w-16 h-16 inline-block rounded-full">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Offline Networking & Referrals</h3>
                     <p class="text-gray-700 text-center">Leveraging personal connections & powerful word-of-mouth.</p>
@@ -127,10 +140,7 @@
                 <!-- Pillar 2 -->
                 <div class="bg-indigo-50 p-6 rounded-lg shadow-md border border-indigo-100 hover:shadow-xl transition-all duration-300 card-hover-scale">
                     <div class="text-indigo-600 text-5xl mb-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 inline-block">
-                            <path d="M18 1.5c2.9 0 5.462 2.357 5.462 5.25v6.75a3.75 3.75 0 0 1-3.75 3.75H16.5a.75.75 0 0 0-.75.75v3.75j-3.75-3.75H9.75a3.75 3.75 0 0 1-3.75-3.75V6.75c0-2.9 2.562-5.25 5.462-5.25H18Z" />
-                            <path d="M1.5 10.5c0-2.9 2.357-5.462 5.25-5.462h6.75a3.75 3.75 0 0 1 3.75 3.75v6.75c0 2.9-2.357 5.462-5.25 5.462H6.75a3.75 3.75 0 0 1-3.75-3.75V10.5h1.5Z" />
-                        </svg>
+                        <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Partners" alt="Partnerships Icon" class="w-16 h-16 inline-block rounded-full">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Strategic Local Partnerships</h3>
                     <p class="text-gray-700 text-center">Collaborating with complementary businesses in the community.</p>
@@ -138,10 +148,7 @@
                 <!-- Pillar 3 -->
                 <div class="bg-indigo-50 p-6 rounded-lg shadow-md border border-indigo-100 hover:shadow-xl transition-all duration-300 card-hover-scale">
                     <div class="text-indigo-600 text-5xl mb-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 inline-block">
-                            <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
-                            <path fill-rule="evenodd" d="M9.344 3.071a49.52 49.52 0 0 0-1.05 1.948A3.75 3.75 0 0 0 6 6.75c0 .414.168.813.475 1.097a6.796 6.796 0 0 1 0 6.312A3.75 3.75 0 0 0 6 17.25c0 .414.168.813.475 1.097a49.52 49.52 0 0 0 1.05 1.948A3.75 3.75 0 0 0 9.75 22.5a.75.75 0 0 0 .75-.75v-3.091a.75.75 0 0 1 .674-.743 48.858 48.858 0 0 0 2.652 0 .75.75 0 0 1 .674.743v3.091a.75.75 0 0 0 .75.75 3.75 3.75 0 0 0 3.301-1.684 49.52 49.52 0 0 0 1.05-1.948 3.75 3.75 0 0 0 .475-1.097 6.796 6.796 0 0 1 0-6.312 3.75 3.75 0 0 0-.475-1.097 49.52 49.52 0 0 0-1.05-1.948A3.75 3.75 0 0 0 14.25 1.5a.75.75 0 0 0-.75.75v3.091a.75.75 0 0 1-.674.743 48.858 48.858 0 0 0-2.652 0 .75.75 0 0 1-.674-.743V2.25a.75.75 0 0 0-.75-.75 3.75 3.75 0 0 0-3.301 1.684Z" clip-rule="evenodd" />
-                        </svg>
+                        <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Content" alt="Content Icon" class="w-16 h-16 inline-block rounded-full">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Valuable Content & Education</h3>
                     <p class="text-gray-700 text-center">Showcasing expertise through helpful, accessible information.</p>
@@ -149,10 +156,7 @@
                 <!-- Pillar 4 -->
                 <div class="bg-indigo-50 p-6 rounded-lg shadow-md border border-indigo-100 hover:shadow-xl transition-all duration-300 card-hover-scale">
                     <div class="text-indigo-600 text-5xl mb-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 inline-block">
-                            <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V11.25h-3.563l-.193.518A2.999 2.999 0 0 0 12 17.25h.75a.75.75 0 0 1 0 1.5H12a4.499 4.499 0 0 1-4.468-4.376l-1.964-.59a.75.75 0 0 1-.404-.784l.698-1.397a.75.75 0 0 1 1.07-.283l1.838.919c.1.05.2.074.302.074h.388c.24 0 .47-.06.674-.172.126-.068.27-.107.417-.107H15A.75.75 0 0 0 15 9.75Z" clip-rule="evenodd" />
-                            <path d="M12 1.5a.75.75 0 0 1 .75.75V4.5a.75.75 0 0 1-1.5 0V2.25A.75.75 0 0 1 12 1.5ZM5.716 5.074a.75.75 0 0 1 .983-1.02l1.523 1.166a.75.75 0 0 1-.983 1.02L5.716 5.074ZM18.284 5.074a.75.75 0 0 1 1.02-.983l1.166 1.523a.75.75 0 0 1-1.02.983l-1.166-1.523ZM2.25 12c0-.414.336-.75.75-.75H5.25a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 12ZM19.5 12a.75.75 0 0 0 .75.75H21a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0-.75.75ZM12 19.5a.75.75 0 0 0-.75.75V22.5a.75.75 0 0 0 1.5 0v-2.25a.75.75 0 0 0-.75-.75ZM4.926 18.284a.75.75 0 0 0-1.02 1.02l1.166 1.523a.75.75 0 1 0 1.02-1.02l-1.166-1.523ZM19.074 18.284a.75.75 0 0 0-1.02-1.02l-1.166 1.523a.75.75 0 1 0 1.02 1.02l1.166-1.523Z" />
-                        </svg>
+                        <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Experience" alt="Experience Icon" class="w-16 h-16 inline-block rounded-full">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Exceptional Client Experience</h3>
                     <p class="text-gray-700 text-center">Ensuring high retention and enthusiastic testimonials.</p>
@@ -160,9 +164,7 @@
                 <!-- Pillar 5 -->
                 <div class="bg-indigo-50 p-6 rounded-lg shadow-md border border-indigo-100 hover:shadow-xl transition-all duration-300 card-hover-scale">
                     <div class="text-indigo-600 text-5xl mb-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 inline-block">
-                            <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.657 8.495c1.987 1.987 3.163 4.514 3.163 7.105v.75c0 .414.336.75.75.75h6.75a.75.75 0 0 0 .75-.75v-.75c0-2.591 1.176-5.118 3.163-7.105A6 6 0 0 0 13.5 3.75h-3Z" clip-rule="evenodd" />
-                        </svg>
+                        <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Digital" alt="Digital Icon" class="w-16 h-16 inline-block rounded-full">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Digital Foundation (Website)</h3>
                     <p class="text-gray-700 text-center">Creating a credible online hub for information & conversion.</p>
@@ -175,15 +177,13 @@
     <section id="phase-1" class="py-16 px-4 sm:px-6 lg:px-8 bg-indigo-50">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">🚀</span> Phase 1: Immediate & Low-Cost Impact (Weeks 1-8)
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Phase+1" alt="Phase 1 Icon" class="mr-3 w-16 h-16 rounded-full"> Phase 1: Immediate & Low-Cost Impact (Weeks 1-8)
             </h2>
 
             <!-- Action 1: Personal Network & Referrals -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 mb-12 flex flex-col md:flex-row items-center gap-6 card-hover-scale">
                 <div class="text-indigo-600 text-6xl md:w-1/4 flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20">
-                        <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 1 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003h-.001a3.75 3.75 0 0 1-6.699 1.485 3.75 3.75 0 0 1-1.485 1.485H1.5v-.003ZM14.25 19.125h-1.5a.75.75 0 0 1-.75-.75V15.75a6.75 6.75 0 0 1 6.75-6.75h.75a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 0-.75.75v.75a.75.75 0 0 1-.75.75Z" />
-                    </svg>
+                    <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Outreach" alt="Outreach Icon" class="w-20 h-20 rounded-full">
                 </div>
                 <div class="md:w-3/4">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">1. Activating Your Personal Network & Referrals</h3>
@@ -214,19 +214,14 @@
                     </ul>
                 </div>
                 <div class="text-indigo-600 text-6xl md:w-1/4 flex justify-center items-center order-1 md:order-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20">
-                        <path d="M19.5 22.5a.75.75 0 0 0 0-1.5h-2.726a1.125 1.125 0 0 1-.985-.716l-3.188-7.617a1 1 0 0 0-.754-.606h-.75c-.917 0-1.704.65-1.935 1.5l-.297 1.187c-.062.247-.152.478-.274.693a1.75 1.75 0 0 1-.093 1.054l-1.57 3.14a.75.75 0 0 0 0 1.06l.358.359a.75.75 0 0 0 1.06 0l1.547-1.547L9 19.25v1.75a.75.75 0 0 0 1.5 0v-1.75a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 .75.75v1.75a.75.75 0 0 0 1.5 0v-1.75a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 .75.75v1.75a.75.75 0 0 0 1.5 0v-1.75a.75.75 0 0 1 .75-.75h.226Z" />
-                        <path d="M12 2.25a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75ZM12 4.5a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75ZM12 6.75a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75ZM12 9a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0V9ZM12 11.25a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75Z" />
-                    </svg>
+                    <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Community" alt="Community Icon" class="w-20 h-20 rounded-full">
                 </div>
             </div>
 
             <!-- Action 3: Instagram Optimization -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 flex flex-col md:flex-row items-center gap-6 card-hover-scale">
                 <div class="text-indigo-600 text-6xl md:w-1/4 flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20">
-                        <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                    </svg>
+                    <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Insta" alt="Instagram Icon" class="w-20 h-20 rounded-full">
                 </div>
                 <div class="md:w-3/4">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">3. Instagram Optimization (Low-Effort Strategy)</h3>
@@ -248,16 +243,13 @@
     <section id="phase-2" class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">💻</span> Phase 2: Building the Digital Foundation (Month 3 onwards)
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Phase+2" alt="Phase 2 Icon" class="mr-3 w-16 h-16 rounded-full"> Phase 2: Building the Digital Foundation (Month 3 onwards)
             </h2>
 
             <!-- Action 4: Professional Website Development -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 mb-12 flex flex-col md:flex-row items-center gap-6 card-hover-scale">
                 <div class="text-indigo-600 text-6xl md:w-1/4 flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20">
-                        <path d="M19.5 22.5a.75.75 0 0 0 0-1.5h-2.726a1.125 1.125 0 0 1-.985-.716l-3.188-7.617a1 1 0 0 0-.754-.606h-.75c-.917 0-1.704.65-1.935 1.5l-.297 1.187c-.062.247-.152.478-.274.693a1.75 1.75 0 0 1-.093 1.054l-1.57 3.14a.75.75 0 0 0 0 1.06l.358.359a.75.75 0 0 0 1.06 0l1.547-1.547L9 19.25v1.75a.75.75 0 0 0 1.5 0v-1.75a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 .75.75v1.75a.75.75 0 0 0 1.5 0v-1.75a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 .75.75v1.75a.75.75 0 0 0 1.5 0v-1.75a.75.75 0 0 1 .75-.75h.226Z" />
-                        <path d="M12 2.25a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75ZM12 4.5a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75ZM12 6.75a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75ZM12 9a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0V9ZM12 11.25a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75Z" />
-                    </svg>
+                    <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Website" alt="Website Icon" class="w-20 h-20 rounded-full">
                 </div>
                 <div class="md:w-3/4">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">4. Professional Website Development: Your Digital Hub</h3>
@@ -286,9 +278,7 @@
                     </ul>
                 </div>
                 <div class="text-indigo-600 text-6xl md:w-1/4 flex justify-center items-center order-1 md:order-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20">
-                        <path d="M1.5 8.67v8.583A2.25 2.25 0 0 0 3.75 19.5h16.5a2.25 2.25 0 0 0 2.25-2.25V8.67m-19.5 0A2.25 2.25 0 0 1 3.75 6.42h16.5a2.25 2.25 0 0 1 2.25 2.25m-19.5 0h-.114A2.25 2.25 0 0 0 1 11.167v.666m19.5-2.497h.114A2.25 2.25 0 0 1 23 11.167v.666m-1.5 9.166V19.5h.114a2.25 2.25 0 0 0 2.25-2.25V8.67M1.5 19.5v-.167A2.25 2.25 0 0 1 3.75 17.25h-.114m16.5 2.417h.114A2.25 2.25 0 0 0 23 17.25v-.167m-1.5-13.417V4.5a2.25 2.25 0 0 1 2.25 2.25V8.67m-19.5 0V6.75a2.25 2.25 0 0 1 2.25-2.25V4.5m11.25 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5Zm-4.5 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5Zm-4.5 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5Z" />
-                    </svg>
+                    <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=Email" alt="Email Icon" class="w-20 h-20 rounded-full">
                 </div>
             </div>
         </div>
@@ -298,13 +288,13 @@
     <section id="budget-considerations" class="py-16 px-4 sm:px-6 lg:px-8 bg-indigo-50">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">💰</span> Budget Considerations
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Budget" alt="Budget Icon" class="mr-3 w-16 h-16 rounded-full"> Budget Considerations
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Low-Cost / Free Card -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow duration-300 card-hover-scale">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4 flex items-center">
-                        <span class="mr-2">✅</span> Low-Cost / Free
+                        <img src="https://placehold.co/60x60/4F46E5/FFFFFF?text=Free" alt="Free Icon" class="mr-2 w-12 h-12 rounded-full"> Low-Cost / Free
                     </h3>
                     <ul class="list-none text-lg text-gray-700 space-y-3">
                         <li class="flex items-start"><span class="mr-2 text-indigo-500">✔️</span> Personal network outreach & referrals.</li>
@@ -317,7 +307,7 @@
                 <!-- Moderate Investment Card -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow duration-300 card-hover-scale">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4 flex items-center">
-                        <span class="mr-2">💲</span> Moderate Investment
+                        <img src="https://placehold.co/60x60/4F46E5/FFFFFF?text=Invest" alt="Investment Icon" class="mr-2 w-12 h-12 rounded-full"> Moderate Investment
                     </h3>
                     <ul class="list-none text-lg text-gray-700 space-y-3">
                         <li class="flex items-start"><span class="mr-2 text-indigo-500">➡️</span> Website development (platform fees, domain, potential design help).</li>
@@ -335,7 +325,7 @@
     <section id="measurement-evaluation" class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">📊</span> Measurement & Evaluation
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Measure" alt="Measurement Icon" class="mr-3 w-16 h-16 rounded-full"> Measurement & Evaluation
             </h2>
             <p class="text-lg leading-relaxed text-gray-700 mb-6 text-center">
                 Regularly tracking the effectiveness of these strategies is crucial for optimizing efforts and ensuring continuous growth.
@@ -353,7 +343,7 @@
     <section id="next-steps" class="py-16 px-4 sm:px-6 lg:px-8 bg-indigo-50">
         <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center justify-center">
-                <span class="mr-3 text-indigo-600">➡️</span> Let's Get Started!
+                <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=Next" alt="Next Steps Icon" class="mr-3 w-16 h-16 rounded-full"> Let's Get Started!
             </h2>
             <p class="text-xl text-gray-700 mb-8">
                 Ready to build a thriving fitness business for Tori Antal?
@@ -391,6 +381,30 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for collapsible navigation
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('hidden');
+                // For better mobile experience, toggle flex-col on the nav-menu itself
+                navMenu.classList.toggle('flex');
+            });
+
+            // Close nav menu when a link is clicked (for mobile)
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!navMenu.classList.contains('md:flex')) { // Only close if not desktop view
+                        navMenu.classList.add('hidden');
+                        navMenu.classList.remove('flex');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
