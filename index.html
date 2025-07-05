@@ -67,37 +67,26 @@
                 <span class="ml-2 text-indigo-200 text-sm opacity-80 hidden sm:inline">Training</span>
             </div>
 
-            <!-- Hamburger menu button (always visible) -->
-            <button id="nav-toggle" class="focus:outline-none md:hidden">
+            <!-- Hamburger menu button (now always visible) -->
+            <button id="nav-toggle" class="focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex space-x-4">
-                <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Summary</a>
-                <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Business & Objectives</a>
-                <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Core Approach</a>
-                <a href="#first-phase" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">First Phase</a>
-                <a href="#second-phase" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Second Phase</a>
-                <a href="#full-website-features" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Website Features</a>
-                <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Budget</a>
-                <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Measurement</a>
-                <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Next Steps</a>
-                <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Contact</a>
-            </nav>
+            <!-- Desktop Navigation Links (Removed - now handled by hamburger menu) -->
+            <!-- Mobile Navigation Menu (Off-canvas, now primary nav) -->
         </div>
     </header>
 
     <!-- Mobile Navigation Menu (Off-canvas) -->
     <div id="nav-backdrop" class="fixed inset-0 bg-black bg-opacity-0 z-40 hidden"></div>
-    <nav id="nav-menu" class="fixed top-0 right-0 h-full w-64 bg-indigo-800 text-white shadow-lg z-50 transform translate-x-full md:hidden flex-col items-center py-8 space-y-4">
+    <nav id="nav-menu" class="fixed top-0 right-0 h-full w-64 bg-indigo-800 text-white shadow-lg z-50 transform translate-x-full flex-col items-center py-8 space-y-4">
         <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Summary</a>
         <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Business & Objectives</a>
         <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Core Approach</a>
-        <a href="#first-phase" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">First Phase</a>
-        <a href="#second-phase" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Second Phase</a>
+        <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Phase 1</a>
+        <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Phase 2</a>
         <a href="#full-website-features" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Website Features</a>
         <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Budget</a>
         <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-2 rounded-md text-center w-full">Measurement</a>
@@ -258,7 +247,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 17.25a4.5 4.5 0 0 0 4.5-4.5V9.75a4.5 4.5 0 0 0-4.5-4.5Z" />
                 </svg>
-                First Phase
+                Phase 1: Immediate & Low-Cost Impact (Weeks 1-8)
             </h2>
 
             <!-- Action 1: Personal Network & Referrals -->
@@ -292,9 +281,9 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 text-base">
                         <div class="flex items-start"><svg class="w-5 h-5 mt-1 mr-2 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg> Identify Partners: Research yoga studios, chiropractors, healthy cafes, running clubs, etc.</div>
                         <div class="flex items-start"><svg class="w-5 h-5 mt-1 mr-2 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4L4 20h16L12 4z"/></svg> Partnership Proposals: Suggest cross-promotion (flyers, joint workshops, reciprocal referrals).</div>
-                        <div class="flex items-start"><svg class="w-5 h-5 mt-1 mr-2 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> Community Boards: Post professional flyers/cards (with permission) in relevant local spots.</div>
-                        <div class="flex items-start"><svg class="w-5 h-5 mt-1 mr-2 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg> Local Events: Attend or participate in health fairs, charity runs, or community wellness events.</div>
-                    </div>
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> Community Boards: Post professional flyers/cards (with permission) in relevant local spots.</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg> Local Events: Attend or participate in health fairs, charity runs, or community wellness events.</li>
+                    </ul>
                 </div>
                 <div class="text-indigo-600 text-6xl md:w-1/4 flex justify-center items-center order-1 md:order-2">
                     <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
