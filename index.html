@@ -36,7 +36,7 @@
                 <span class="ml-2 text-indigo-200 text-sm opacity-80 hidden sm:inline">Training</span>
             </div>
 
-            <!-- Hamburger menu button (always visible on mobile, hidden on larger screens for desktop nav) -->
+            <!-- Hamburger menu button (always visible) -->
             <button id="nav-toggle" class="md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -73,42 +73,28 @@
         </div>
     </header>
 
-    <!-- Hero Banner Section (Scrolls with content) -->
-    <section id="hero-banner" class="bg-gradient-to-r from-indigo-600 to-purple-700 shadow-xl py-10 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-0 drop-shadow-lg">
-                Marketing Strategy
-            </h1>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mt-2 mb-4 opacity-90">
-                Tori Antal
-            </h2>
-            <p class="text-lg sm:text-xl opacity-80">
-                Sustainable Lifestyle
-            </p>
-            <p class="text-sm sm:text-base opacity-70 mt-2">
-                July 3, 2025
-            </p>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video-intro" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
-        <div class="container mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                <svg class="w-16 h-16 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9A2.25 2.25 0 004.5 18.75z" />
-                </svg>
-                Watch the Vision
-            </h2>
-            <div class="relative w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-xl">
-                <video controls autoplay loop muted playsinline class="w-full h-auto">
-                    <source src="Tori.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+    <!-- Video Section - Now serving as Hero Banner -->
+    <section id="hero-banner" class="bg-gray-100 py-0"> <!-- Removed padding and background to let video fill -->
+        <div class="relative w-full overflow-hidden shadow-xl">
+            <video controls autoplay loop muted playsinline class="w-full h-auto object-cover">
+                <source src="Tori.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-800 via-transparent to-transparent opacity-75"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-8 text-white text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-0 drop-shadow-lg">
+                    Marketing Strategy
+                </h1>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mt-2 mb-4 opacity-90">
+                    Tori Antal
+                </h2>
+                <p class="text-lg sm:text-xl opacity-80">
+                    Sustainable Lifestyle
+                </p>
+                <p class="text-sm sm:text-base opacity-70 mt-2">
+                    July 3, 2025
+                </p>
             </div>
-            <p class="text-center text-gray-600 mt-6 text-lg">
-                Discover the essence of Tori Antal's approach to a sustainable lifestyle.
-            </p>
         </div>
     </section>
 
@@ -562,47 +548,4 @@
                 &copy; 2025 Tori Antal Fitness. All rights reserved.
             </p>
         </div>
-    </footer>
-
-    <script>
-        // JavaScript for collapsible navigation
-        document.addEventListener('DOMContentLoaded', function () {
-            const navToggle = document.getElementById('nav-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            navToggle.addEventListener('click', function () {
-                navMenu.classList.toggle('hidden');
-                navMenu.classList.toggle('flex'); // Toggle flex for visibility
-                // Adjust position for mobile dropdown
-                if (navMenu.classList.contains('flex')) {
-                    navMenu.style.position = 'absolute';
-                    navMenu.style.width = '100%';
-                    navMenu.style.left = '0';
-                    navMenu.style.top = '100%'; // Position below the header
-                } else {
-                    navMenu.style.position = '';
-                    navMenu.style.width = '';
-                    navMenu.style.left = '';
-                    navMenu.style.top = '';
-                }
-            });
-
-            // Close nav menu when a link is clicked (for mobile)
-            navMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    // Check if the menu is currently expanded (i.e., not hidden)
-                    if (!navMenu.classList.contains('hidden')) {
-                        navMenu.classList.add('hidden');
-                        navMenu.classList.remove('flex');
-                        navMenu.style.position = ''; // Reset position
-                        navMenu.style.width = '';
-                        navMenu.style.left = '';
-                        navMenu.style.top = '';
-                    }
-                });
-            });
-        });
-    </script>
-
-</body>
-</html>
+    </foo
