@@ -37,38 +37,25 @@
             </div>
 
             <!-- Hamburger menu button (always visible) -->
-            <button id="nav-toggle" class="md:hidden focus:outline-none">
+            <button id="nav-toggle" class="focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex space-x-4">
-                <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Summary</a>
-                <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Business & Objectives</a>
-                <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Core Approach</a>
-                <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 1</a>
-                <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Phase 2</a>
-                <a href="#full-website-features" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Website Features</a>
-                <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Budget</a>
-                <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Measurement</a>
-                <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Next Steps</a>
-                <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md">Contact</a>
-            </nav>
-
-            <!-- Mobile Navigation Links (Collapsible, controlled by JS) -->
-            <nav id="nav-menu" class="hidden md:hidden flex-col items-center space-y-2 mt-3 w-full absolute top-full left-0 bg-indigo-800 bg-opacity-90 py-2 max-h-[80vh] overflow-y-auto">
-                <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Summary</a>
-                <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Business & Objectives</a>
-                <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Core Approach</a>
-                <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Phase 1</a>
-                <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Phase 2</a>
-                <a href="#full-website-features" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Full Website Features</a>
-                <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Budget</a>
-                <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Measurement</a>
-                <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Next Steps</a>
-                <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center w-full">Contact</a>
+            <!-- Navigation Links (Collapsible by default, controlled by JS) -->
+            <nav id="nav-menu" class="hidden flex-col items-center space-y-2 mt-3 w-full absolute top-full left-0 bg-indigo-800 bg-opacity-90 py-2">
+            <nav id="nav-menu" class="hidden flex-col items-center space-y-2 mt-3 w-full absolute top-full left-0 bg-indigo-800 bg-opacity-90 py-2 max-h-[80vh] overflow-y-auto">
+                <a href="#executive-summary" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Summary</a>
+                <a href="#business-objectives" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Business & Objectives</a>
+                <a href="#core-approach" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Core Approach</a>
+                <a href="#phase-1" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Phase 1</a>
+                <a href="#phase-2" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Phase 2</a>
+                <a href="#full-website-features" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Full Website Features</a>
+                <a href="#budget-considerations" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Budget</a>
+                <a href="#measurement-evaluation" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Measurement</a>
+                <a href="#next-steps" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Next Steps</a>
+                <a href="#contact" class="text-white hover:text-indigo-200 transition duration-200 px-3 py-1 rounded-md text-center">Contact</a>
             </nav>
         </div>
     </header>
